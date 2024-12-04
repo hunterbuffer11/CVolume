@@ -143,12 +143,12 @@ elif selected_option == '过滤三角网法':
                 with open(file_path, 'wb') as f:
                     f.write(uploaded_file.read())
                 st.text("提示：该方法处理文件较慢请耐心等待")
-        if st.button("处理文件"):
+            if st.button("处理文件"):
                   st.session_state.processed_volume_delaunay = []
                   with st.spinner('处理中，请稍候...'):
                     # 创建进度条
-                    progress_bar = st.progress(0)
-                    total_files = len(file_paths)
+                     progress_bar = st.progress(0)
+                     total_files = len(file_paths)
 
                   for i, file_path in enumerate(file_paths):
                     # 调用体元处理函数
@@ -157,7 +157,7 @@ elif selected_option == '过滤三角网法':
                       st.write(f"文件 {os.path.basename(file_path)} 处理后的体积:", volume_delaunay)
                       st.success(f"文件 {os.path.basename(file_path)} 处理完成")
                       
-        if st.button("获取数字"):
+            if st.button("获取数字"):
                   df=pd.DataFrame({'体积': st.session_state.processed_volume_delaunay},index=file_paths)
                   if st.session_state.processed_volume_delaunay:
                      st.dataframe(df.style.background_gradient(cmap='Blues'), width=600, height=400)
