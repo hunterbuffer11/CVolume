@@ -30,7 +30,7 @@ def process_single_file(file_path,p):
         if len(points) >= 4:
             hull = ConvexHull(points)
             total_volume.append(hull.volume)
-    totalvolume=np.sum(total_volume)
+    totalvolume=round(np.sum(total_volume),2)
     return totalvolume,z_not
     
     
