@@ -157,7 +157,7 @@ elif selected_option == '过滤三角网法':
                       st.write(f"文件 {os.path.basename(file_path)} 处理后的体积:", volume_delaunay)
                       st.success(f"文件 {os.path.basename(file_path)} 处理完成")
                       
-                if st.button("获取数字"):
+        if st.button("获取数字"):
                   df=pd.DataFrame({'体积': st.session_state.processed_volume_delaunay},index=file_paths)
                   if st.session_state.processed_volume_delaunay:
                      st.dataframe(df.style.background_gradient(cmap='Blues'), width=600, height=400)
