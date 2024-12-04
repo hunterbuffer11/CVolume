@@ -9,7 +9,7 @@ import pandas as pd
 from pyecharts.charts import Bar, Line
 from pyecharts import options as opts
 from streamlit_echarts import st_pyecharts
-
+import matplotlib
 # 配置页面布局为宽屏
 st.set_page_config(layout="wide", initial_sidebar_state = "expanded")
 # 使用CSS居中标题并设置颜色
