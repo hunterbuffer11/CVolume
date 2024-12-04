@@ -143,7 +143,7 @@ elif selected_option == '过滤三角网法':
                 with open(file_path, 'wb') as f:
                     f.write(uploaded_file.read())
                 st.text("提示：该方法处理文件较慢请耐心等待")
-                if st.button("处理文件"):
+        if st.button("处理文件"):
                   st.session_state.processed_volume_delaunay = []
                   with st.spinner('处理中，请稍候...'):
                     # 创建进度条
