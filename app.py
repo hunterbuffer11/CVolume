@@ -20,7 +20,7 @@ st.title("Crown volume calculator")
 horizontal_bar = "<hr style='margin-top: 0; margin-bottom: 0; height: 1px; border: 1px solid #635985;'><br>"
 st.markdown(horizontal_bar, True)
 st.header('1. 使用方法')
-st.text('在右边栏点击method,选择方法')
+st.text('在右边栏点击method,然后阅读使用说明')
 st.header('2. 输入数据')
 st.text('输入CSV文件, 格式为: x, y, z')
 st.header('3. 计算结果')
