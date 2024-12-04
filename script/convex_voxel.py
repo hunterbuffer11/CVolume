@@ -7,7 +7,6 @@ def calculate_convex_hull_volume(points):
         hull = ConvexHull(points)
         return hull.volume
     except Exception as e:
-        #print(f"计算凸包体积时出错: {e}")
         return 0
 
 def calculate_voxel_volume(points, voxel_size):
