@@ -151,7 +151,7 @@ elif selected_option == '过滤三角网法':
                      total_files = len(file_paths)
 
                   for i, file_path in enumerate(file_paths):
-                    # 调用体元处理函数
+                    # 调用处理函数
                       volume_delaunay = dn.process_single_file(file_path, layer_height, max_edge_length)
                       st.session_state.processed_volume_delaunay.append(volume_delaunay)
                       st.write(f"文件 {os.path.basename(file_path)} 处理后的体积:", volume_delaunay)
