@@ -53,7 +53,10 @@ def process_layer_parallel(args):
 def process_single_file(file_path, layer_height, max_edge_length):
     data = pd.read_csv(file_path).to_numpy()
     points = data[:, 0:3]
-
+    # Assuming 'points' is your numpy array of points
+    jitter_amount = 1e-6
+    jitter = np.random.uniform(-jitter_amount, jitter_amount, size=points.shape)
+    points=points+jitter
     layers, z_values = layer_point_cloud(points, layer_height)
     total_volume = 0
     triangulations = []
